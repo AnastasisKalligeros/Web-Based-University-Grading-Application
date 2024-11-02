@@ -1,6 +1,8 @@
 # Web-Based-University-Grading-Application
 
-A group project that was developed as a university assignment for the subject "Modern Issues of Software Technology". The scoring web application was implemented in Visual C# ASP.NET Core Web Application using the Model View Controller(ΜVC) design architecture in the Visual Studio. In addition to the creation of the necessary base we chose as a tool the Microsoft Sql Server. Finally, we proceeded with the implementation of the online application by setting the Login.cshtml as the home page which includes a Login form that when the user logs in with successfully redirected to a general menu (index.cshtml) with Students, Professors, Secretariats with the corresponding their respective functions as submenus of each option. </br> </br>
+A group project that was developed as a university assignment for the subject "Modern Issues of Software Technology". 
+
+The scoring web application was implemented in Visual C# ASP.NET Core Web Application using the Model View Controller(ΜVC) design architecture in the Visual Studio. In addition to the creation of the necessary base we chose as a tool the Microsoft Sql Server. Finally, we proceeded with the implementation of the online application by setting the Login.cshtml as the home page which includes a Login form that when the user logs in with successfully redirected to a general menu (index.cshtml) with Students, Professors, Secretariats with the corresponding their respective functions as submenus of each option. </br> </br>
 
 <b>Ιnstallation Ιnstructions:</b> </br> </br>
 
