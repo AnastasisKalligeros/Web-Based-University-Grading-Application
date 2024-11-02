@@ -1,0 +1,44 @@
+﻿@model MyViewModel
+
+@{
+    ViewBag.Title = "ViewStudent";
+}
+<html>
+<head>
+
+</head>
+<body>
+    <form >
+
+
+        <div>
+            <h1 id="but1">View Student </h1> <br /> <br />
+        </div>
+        <table class="table table-striped">
+            <tr>
+
+                <th>Coursetitle</th>
+                <th>Grade</th>
+            </tr>
+
+            @foreach (var row in Model.cour.Zip(Model.cours, (a, b) => new { A = a, B = b }))
+
+            {
+                <tr>
+                    <td>@row.A.coursetitle</td>
+                    <td>@row.B.gradecoursestudent</td>
+                </tr>
+            }
+        </table> <br /> <br />
+
+        <div class="copy-wthree">
+            <p>
+                Created by Anastasis Kalligeros and Georgios Papakostas
+                <span style="color:blue; "> &#8471; 2023 </span>
+
+            </p>
+        </div>
+    </form>
+
+</body>
+</html>

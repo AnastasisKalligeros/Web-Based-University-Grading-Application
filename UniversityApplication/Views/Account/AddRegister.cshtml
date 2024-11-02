@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "AddRegister";
+ 
+}
+
+<head>
+
+</head>
+<body>
+    <h1> Register Form </h1> <br /> <br />
+    <div class="clear-loading spinner">
+        <span></span>
+    </div>
+    <div class="w3ls-login box box--big">
+        <!-- form starts here -->
+        <form action="Reg" method="post">
+            <div class="agile-field-txt">
+                <label><i class="fa fa-user" aria-hidden="true"></i> Username: </label>  <input type="text" name="Name" placeholder="Enter User Name" required="" /> 
+
+            </div> <br />
+            <div class="agile-field-txt">
+                <label><i class="fa fa-unlock-alt" aria-hidden="true"></i> Password: </label>   <input type="password" id="password" name="Password" placeholder="Enter Password" required="" /> 
+
+                <div class="agile_label">
+                    <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
+                    <label class="check" for="check3">Show Password</label> <br />
+                </div> <br />
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("password");
+                        if (x.type === "password") {
+                            x.type = "text";
+
+                        } else {
+                            x.type = "password";
+
+                        }
+                    }
+                </script>
+
+                <div class="agile-field-txt">
+                    <label><i class="fa fa-unlock-alt" aria-hidden="true"></i> Confirm Password: </label>  <input type="password" id="confirm_password" placeholder="Confirm Password" required="" /> <br />
+
+                </div> <br />
+
+                <script>
+                    var password = document.getElementById("password")
+                        , confirm_password = document.getElementById("confirm_password");
+
+                    function validatePassword() {
+                        if (password.value != confirm_password.value) {
+                            confirm_password.setCustomValidity("Passwords Don't Match");
+                        } else {
+                            confirm_password.setCustomValidity('');
+                        }
+                    }
+
+                    password.onchange = validatePassword;
+                    confirm_password.onkeyup = validatePassword;
+                </script>
+
+                <div class="agile-field-txt">
+
+                    <label><i class="fa fa-role" aria-hidden="true"></i> Role: </label>    <select Name="role"> 
+                        <option value="Student">Student</option>
+                        <option value="Professor">Professor</option>
+                        <option value="Secretary">Secretary</option>
+                    </select><br /> <br />
+
+                </div>
+            </div>
+            
+            
+            <!-- script for show password -->
+           
+            <!-- //end script -->
+            <input type="submit" value="Register"> <br /> <br /> <br /> <br /> <br />
+            <!-- onclick="myFunction()-->
+        </form>
+    </div>
+    <!-- //form ends here -->
+
+    <div class="copy-wthree">
+        <p>
+            Created by Anastasios Kalligeros and Georgios Papakwstas
+            <span style="color:blue; "> &#8471; 2023 </span>
+
+        </p>
+    </div>
+
+</body>

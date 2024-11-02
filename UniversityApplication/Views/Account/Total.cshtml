@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Total";
+}
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h1 id="but1">Here is your total score! </h1> <br /> <br />
+    </div>
+    <form action="ViewTotal" method="post">
+
+        <div class="agile-field-txt">
+            <label><i class="fa fa-user" aria-hidden="true"></i> Registration Number: </label>
+            <input type="number" name="registrationnumber" placeholder="Enter your Registration Number" required="" />
+        </div> <br />
+        <div>
+            <input type="submit" value="Submit" onclick="@("window.location.href='" + @Url.Action("ViewTotal", "Account") + "'");">
+        </div>
+
+    </form>
+</body>
+</html>

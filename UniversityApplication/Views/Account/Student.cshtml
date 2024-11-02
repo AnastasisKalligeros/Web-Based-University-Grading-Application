@@ -1,0 +1,32 @@
+﻿
+
+@{
+    ViewBag.Title = "Student";
+
+}
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h1 id="but1">View your Grade! </h1> <br /> <br />
+    </div>
+    <form action="ViewStudent" method="post">
+        <div class="agile-field-txt">
+            <label><i class="fa fa-user" aria-hidden="true"></i> Registration Number: </label>
+            <input type="number" name="registrationnumber" placeholder="Enter your Registration Number" required="" />
+        </div> <br />
+
+
+
+
+
+
+        <div>
+            <input type="submit" value="Submit" onclick="@("window.location.href='" + @Url.Action("ViewStudent", "Account") + "'");">
+        </div>
+
+    </form>
+</body>
+</html>

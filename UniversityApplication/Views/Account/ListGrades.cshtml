@@ -1,0 +1,60 @@
+﻿@model MyViewModel
+
+
+<html>
+
+<head>
+
+</head>
+<body>
+
+
+    <div>
+        <h1 id="but1">View List </h1>
+    </div> <br /> <br />
+    @if (Model.cours.Count() > 0)
+
+    {
+        <table class="table table-striped" id="tab">
+            <tr>
+
+                <th>Registration Number</th>
+                <th>Grade</th>
+            </tr>
+
+            @foreach (var row in Model.cours)
+
+            {
+                <tr>
+                    <td>@row.registrationnumber</td>
+                    <td>@row.gradecoursestudent</td>
+
+                </tr>
+            }
+
+
+
+        </table> <br /> <br />
+    }
+    else
+    {
+<label><i class="fa fa-user" aria-hidden="true"></i>This course doesn’t  exist! Please press the button “Go back!” to try again. </label>
+         <br /> <br />
+        <div>
+            <input type="submit" value="Go Back!" onclick="@("window.location.href='" + @Url.Action("List", "Account") + "'");">
+        </div> <br /> <br /> <br /> <br /> <br />
+
+
+
+    }
+
+    <div class="copy-wthree">
+        <p>
+            Created by Anastasis Kalligeros and Georgios Papakostas
+            <span style="color:blue; "> &#8471; 2023 </span>
+
+        </p>
+    </div>
+
+</body>
+</html>

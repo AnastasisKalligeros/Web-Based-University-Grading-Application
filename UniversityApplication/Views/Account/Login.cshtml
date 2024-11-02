@@ -1,0 +1,87 @@
+﻿@{
+	ViewBag.Title = "Login";
+
+}
+<head>
+    <style>
+      
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="">
+        <h1> Login Form </h1>
+        <br />
+        <br />
+        <div class="clear-loading spinner">
+
+        </div>
+        <div class="w3ls-login box box--big">
+            <!-- form starts here -->
+            <form action="index" method="post">
+                <div class="agile-field-txt">
+                    <label><i class="fa fa-user" aria-hidden="true"></i> Username: </label>   <input type="text" name="Name" placeholder="Enter your username" required="" />
+
+                </div> <br />
+                <div class="agile-field-txt">
+                    <label><i class="fa fa-unlock-alt" aria-hidden="true"></i> Password: </label>  <input type="password" name="Password" placeholder="Enter Password" required="" id="myInput" />
+
+
+
+                    <div class="agile_label">
+                        <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
+                        <label class="check" for="check3">Show Password</label> <br />
+                    </div> <br />
+
+
+                </div>
+                <div class="agile-field-txt">
+                    <label><i class="fa fa-role" aria-hidden="true"></i> Role: </label>   <input type="text" name="Role" placeholder="Enter your Role" required="" />
+
+                </div> <br />
+
+
+                <input type="submit" value="LOGIN" asp-area="" asp-controller="Account" asp-action="index"> <br /> <br />
+
+
+                <div class="agile-right">
+                    Don't have an account ? <a asp-area="" asp-controller="Account" asp-action="AddRegister"> Create one</a> <br /> <br /> <br /> <br />
+
+
+
+
+
+                </div>
+                <!-- script for show password -->
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myInput");
+                        if (x.type === "password") {
+                            x.type = "text";
+                        } else {
+                            x.type = "password";
+                        }
+                    }
+                </script>
+                <!-- //end script -->
+
+            </form>
+        </div>
+        <!-- //form ends here -->
+
+        <div class="copy-wthree">
+            <p>
+                Created by Anastasios Kalligeros and Georgios Papakwstas
+                <span style="color:blue; "> &#8471; 2023 </span>
+
+            </p>
+        </div>
+    </div>
+
+    
+
+
+</body>

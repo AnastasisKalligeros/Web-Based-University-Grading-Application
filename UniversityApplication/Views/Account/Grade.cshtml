@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Grade";
+}
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h1 id="but1">Here is your Grade by Semester! </h1>
+    </div> <br /> <br />
+                  <form action="ViewGrade" method="post">
+                      <div class="agile-field-txt">
+                          <label><i class="fa fa-user" aria-hidden="true"></i> Registration Number: </label>
+                          <input type="number" name="registrationnumber" placeholder="Enter your Registration Number" required="" />
+                      </div> <br />
+
+                      <div class="agile-field-txt">
+                          <label><i class="fa fa-user" aria-hidden="true"></i> Course semester: </label>
+                          <input type="number" name="coursesemester" placeholder="Enter Course Semester" required="" />
+                      </div> <br />
+
+
+
+
+                      <div>
+                          <input type="submit" value="Submit" onclick="@("window.location.href='" + @Url.Action("ViewGrade", "Account") + "'");">
+                      </div>
+
+                  </form>
+</body>
+</html>

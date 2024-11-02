@@ -1,0 +1,205 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <style>
+
+        .mynav_navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+            .mynav_navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+
+
+        .mynav_dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+
+
+            .mynav_dropdown .mynav_dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+
+
+            .mynav_navbar a:hover, .mynav_dropdown:hover .mynav_dropbtn {
+                background-color: red;
+            }
+
+
+
+        .mynav_dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+
+
+            .mynav_dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+
+
+                .mynav_dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+
+
+        .mynav_dropdown:hover .mynav_dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+
+
+
+
+        <div class="mynav_navbar">
+
+
+
+            <div class="mynav_dropdown">
+
+                <button class="mynav_dropbtn">
+
+                    Students
+
+                    <i class="fa fa-caret-down"></i>
+
+                </button>
+
+                <div class="mynav_dropdown-content">
+
+                    <a asp-area="" asp-controller="Account" asp-action="Student">View grade by course</a>
+
+                    <a asp-area="" asp-controller="Account" asp-action="Grade">View grade by semester</a>
+
+                    <a asp-area="" asp-controller="Account" asp-action="Total">View total grading</a>
+                </div>
+
+            </div>
+
+            <div class="mynav_dropdown">
+
+                <button class="mynav_dropbtn">
+
+                    Professors
+
+                    <i class="fa fa-caret-down"></i>
+
+                </button>
+
+                <div class="mynav_dropdown-content">
+
+                    <a asp-area="" asp-controller="Account" asp-action="List">View grade list by course</a>
+
+                    <a asp-area="" asp-controller="Account" asp-action="EntryCourse">Posting a grade per course</a>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="mynav_dropdown">
+
+                <button class="mynav_dropbtn">
+
+                    Secretaries
+
+                    <i class="fa fa-caret-down"></i>
+
+                </button>
+
+                <div class="mynav_dropdown-content">
+
+                    <a asp-area="" asp-controller="Account" asp-action="Registration">Registration of Courses, Professors, Students</a>
+
+                    <a asp-area="" asp-controller="Account" asp-action="ViewCourses">View courses (course title, semester, responsible professor).</a>
+
+                    <a asp-area="" asp-controller="Account" asp-action="Assigning">Assigning a course to a Professor.</a>
+
+                    <a asp-area="" asp-controller="Account" asp-action="Declaration">Course declaration to Student</a>
+                </div>
+
+            </div>
+
+            <div class="mynav_dropdown">
+
+                <button class="mynav_dropbtn"  onclick="@("window.location.href='" + @Url.Action("Login", "Account") + "'");">
+
+                   Logout
+
+                    <i class="fa fa-caret-down"></i>
+
+                </button>
+            </div> 
+            </div>
+            <br /> <br />
+
+
+
+
+
+
+
+
+</header>
+    <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+        
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+
+        <div class="copy-wthree">
+            <p>
+                Created by Anastasios Kalligeros and Georgios Papakwstas
+                <span style="color:blue; "> &#8471; 2023 </span>
+
+            </p>
+        </div>
+
+
+</body>
+</html>

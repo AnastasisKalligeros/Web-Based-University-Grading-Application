@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "List";
+}
+<html>
+<head>
+
+</head>
+<body>
+    <form action="ListGrades" method="post">
+        <div>
+            <h1 id="but1">View grade list by course! </h1> <br /> <br />
+        </div>
+
+        <div>
+            <input type="text" name="coursetitle" placeholder="Enter Course" required="" />
+        </div> <br />
+
+        <div>
+            <input type="submit" value="Submit" onclick="@("window.location.href='" + @Url.Action("ListGrades", "Account") + "'");">
+        </div> <br /> <br />
+
+
+
+        <div class="copy-wthree">
+            <p>
+                Created by Anastasis Kalligeros and Georgios Papakostas
+                <span style="color:blue; "> &#8471; 2023 </span>
+
+            </p>
+        </div>
+    </form>
+</body>
+</html>
